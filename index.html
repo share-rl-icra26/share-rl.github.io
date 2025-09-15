@@ -3,75 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <title>SHaRe-RL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 40px;
-      background-color: #f8f8f8;
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
     }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
     h1 {
       text-align: center;
+      margin-bottom: 0.5em;
+      font-size: 2.2em;
     }
+
+    h3 {
+      color: var(--accent);
+      margin-bottom: 0.4em;
+    }
+
+    p.subtitle {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2em;
+      font-size: 1.15em;
+      color: #555;
+    }
+
     .container {
       display: flex;
-      gap: 40px;
+      gap: 30px;
       justify-content: center;
       align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
     .column {
-      flex: 1;
-      max-width: 30%;
+      flex: 1 1 300px;
+      max-width: 360px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.06);
     }
-    iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: none;
-    }
-    img {
+
+    img, video {
       width: 100%;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      margin-top: 10px;
     }
+
     .footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 0.9em;
-      color: #666;
+      color: #999;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
 <body>
 
-<h1>SHaRe-RL</h1>
-<p style="text-align:center; max-width:800px; margin:auto; font-size:1.1em;">
-Structured, Human-in-the-Loop Reinforcement Learning for Contact-Rich Industrial Assembly Tasks
-</p>
+  <h1>SHaRe-RL</h1>
+  <p class="subtitle">
+    Structured, Human-in-the-Loop Reinforcement Learning for Contact-Rich Industrial Assembly Tasks
+  </p>
 
-<div class="container">
-  <div class="column">
-    <h3>Abstract</h3>
-    <p>
-      We present SHaRe-RL, a reinforcement learning framework for high-precision, contact-rich industrial assembly.
-      By integrating manipulation primitives, human-in-the-loop corrections, and adaptive compliance, SHaRe-RL enables
-      safe and sample-efficient learning in the real world. Experiments with industrial connectors show high success
-      within practical time budgets, outperforming human baselines.
-    </p>
+  <div class="container">
+
+    <div class="column">
+      <h3>Abstract</h3>
+      <p>
+        We present SHaRe-RL, a reinforcement learning
+        framework that leverages multiple sources of prior knowledge.
+        By (i) structuring skills into manipulation primitives, (ii)
+        incorporating human demonstrations and online corrections,
+        and (iii) bounding interaction forces with per-axis compliance,
+        SHaRe-RL enables efficient and safe online learning for long-
+        horizon, contact-rich industrial assembly tasks. Experiments
+        on the insertion of industrial Harting connector modules with
+        0.2–0.4 mm clearance demonstrate that SHaRe-RL achieves
+        reliable performance within practical time budgets. Our results
+        show that process expertise, without requiring robotics or RL
+        knowledge, can meaningfully contribute to learning, enabling
+        safer, more robust, and more economically viable deployment
+        of RL for industrial assembly.
+      </p>
+    </div>
+
+    <div class="column">
+      <h3>Visual Abstract</h3>
+      <img src="visual_abstract.png" alt="Visual abstract for SHaRe-RL">
+    </div>
+
+    <div class="column">
+      <h3>Video</h3>
+      <video controls preload="metadata" poster="visual_abstract.png">
+        <source src="share_rl_demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
   </div>
 
-  <div class="column">
-    <h3>Visual Abstract</h3>
-    <img src="visual_abstract.png" alt="Visual Abstract">
+  <div class="footer">
+    Anonymous Project Page for Double-Blind Review — ICRA 2026 Submission
   </div>
-
-  <div class="column">
-    <h3>Video</h3>
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="footer">
-  Anonymous Project Page for Double-Blind Review – ICRA 2026 Submission
-</div>
 
 </body>
 </html>
