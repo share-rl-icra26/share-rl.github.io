@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SHaRe-RL</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      background-color: #f8f8f8;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .column {
+      flex: 1;
+      max-width: 30%;
+    }
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<h1>SHaRe-RL</h1>
+<p style="text-align:center; max-width:800px; margin:auto; font-size:1.1em;">
+Structured, Human-in-the-Loop Reinforcement Learning for Contact-Rich Industrial Assembly Tasks
+</p>
+
+<div class="container">
+  <div class="column">
+    <h3>Abstract</h3>
+    <p>
+      We present SHaRe-RL, a reinforcement learning framework for high-precision, contact-rich industrial assembly.
+      By integrating manipulation primitives, human-in-the-loop corrections, and adaptive compliance, SHaRe-RL enables
+      safe and sample-efficient learning in the real world. Experiments with industrial connectors show high success
+      within practical time budgets, outperforming human baselines.
+    </p>
+  </div>
+
+  <div class="column">
+    <h3>Visual Abstract</h3>
+    <img src="visual_abstract.png" alt="Visual Abstract">
+  </div>
+
+  <div class="column">
+    <h3>Video</h3>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="footer">
+  Anonymous Project Page for Double-Blind Review – ICRA 2026 Submission
+</div>
+
+</body>
+</html>
